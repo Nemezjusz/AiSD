@@ -6,7 +6,7 @@ def kolo(x):
 
 #poczatek >= 0
 #koniec > poczatku
-#taki test
+#nie ma takich testow
 def MonteCarlo(poczatek, koniec, dokladnosc, funkcja):
     trafione = 0
     wszystkie = 0
