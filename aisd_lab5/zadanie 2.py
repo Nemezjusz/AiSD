@@ -4,8 +4,8 @@ dodatkowy = []
 przesuniecie = -2
 
 def hanoli_it(n, poczatkowy, dodatkowy, docelowy):
-    global przesuniecie
     nieczynny = 0
+    global przesuniecie
     if n % 2 == 0: przesuniecie = 2
     wieze = { 0: poczatkowy, 1: dodatkowy, 2: docelowy}
     while len(poczatkowy) != 0 or len(dodatkowy) != 0:
