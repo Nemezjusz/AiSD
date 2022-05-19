@@ -34,5 +34,5 @@ def MonteCarlo(poczatek, koniec, dokladnosc, funkcja):
 #aby funkcja działała poprawnie i zachowała swoja uniwersalnosc
 #nalezy zmodyfikowac takze wartos "r" w funkcji koło
 
-print(MonteCarlo(0, 2, 100000, math.sin))
-print(4*MonteCarlo(0, 1, 100000, kolo))
+print("Sinus: ", MonteCarlo(0, 2, 100000, math.sin))
+print("Koło (r=1): ", 4*MonteCarlo(0, 1, 100000, kolo))

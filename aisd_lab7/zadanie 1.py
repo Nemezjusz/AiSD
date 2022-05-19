@@ -6,6 +6,10 @@ path = path.splitlines()
 lista = []
 for x in range(1000):
     for y in range(1000):
-        if path[x][y] == "A" and path[x][y+1] == "B" and path[x][y+2] == "C" and \
-                path[x+1][y] == "B" and path[x+2][y] == "C":
-            lista.append((x, y))
+        try:
+            if path[x][y] == "A" and path[x][y+1] == "B" and path[x][y+2] == "C" and \
+                    path[x+1][y] == "B" and path[x+2][y] == "C":
+                lista.append((x, y))
+        except IndexError:
+            pass
+print(lista)

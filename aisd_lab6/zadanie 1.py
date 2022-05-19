@@ -16,6 +16,24 @@ def printing(lista, lvl=0):
             printing(x, lvl+1)
 
 
+def INS(lista, liczba, lvl=0):
+    if lvl>0:
+        lista = [lista]
+    if len(lista) == 1:
+        lista.append([])
+
+    if len(lista[1]) == 2:
+        if liczba < lista[0]:
+            INS(lista[1][0], liczba, lvl+1)
+        else:
+            pass
+
+    elif liczba > lista[0] and len(lista[1]) != 0:
+        lista[1].insert(1, liczba)
+    else:
+        lista[1].insert(0, liczba)
+
+    print(lista)
 
 def MIN(lista, korzen, lvl=0):
     global mm
@@ -56,6 +74,16 @@ def SEAR(lista, liczba):
             SEAR(x, liczba)
 
 
+def pom(krz, lista):
+    if krz not in lista:
+        i = 0
+        while lista[i] < krz:
+            if type(lista[i]) == float:
+                i += 2
+        lista.insert(i, krz)
+        lista.insert(i+1, [])
+    else:
+        i = lista.index(krz)
 
 mx = 0
 mm = 99
@@ -63,4 +91,5 @@ print(MAX(dzrzewo, 7.5))
 print(MIN(dzrzewo, 7.5))
 
 p = [1.5, [1.3, 1.6]]
+INS(p, 1.7)
 print(p)
